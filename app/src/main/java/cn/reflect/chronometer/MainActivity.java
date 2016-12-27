@@ -3,6 +3,7 @@ package cn.reflect.chronometer;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Chronometer;
 
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     public void onReset(View view) {
         //setBase 设置基准时间
         //设置参数base为SystemClock.elapsedRealtime()即表示从当前时间开始重新计时）。
-        chronometer.setBase(SystemClock.elapsedRealtime() - 30 * 60 * 1000);
+        Log.e("dss", "SystemClock.elapsedRealtime()=" + SystemClock.elapsedRealtime());
+        chronometer.setBase(SystemClock.elapsedRealtime() + 30 * 60 * 1000);
+
     }
 }
